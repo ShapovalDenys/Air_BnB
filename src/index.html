@@ -1,13 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
-    <link rel="stylesheet" href="./styles/main.css">
+    <title>Air_BnB</title>
+    <link rel="stylesheet" href="../dist/styles/main.css">
   </head>
   <body>
-    <h1>Hello Mate Academy</h1>
-    <script type="text/javascript" src="scripts/main.js"></script>
+    <header class="header">
+      <img class="header__logo-photo" src="./images/photo_logo.png" alt="air_bnb logo">
+      <nav class="header__navigation">
+        <ul class="header__navigation__list">
+          <li class="header__navigation__item">
+            <a class="header__navigation__link" href="become_a_host">Become a host</a>
+          </li>
+          <li class="header__navigation__item">
+            <a class="header__navigation__link" href="trips">Trips</a>
+          </li>
+          <li class="header__navigation__item">
+            <a class="header__navigation__link" href="messages">Messages</a>
+          </li>
+        </ul>
+      <img class="header__client-photo" src="./images/client_photo.png" alt="client photo">
+      </nav>
+    </header>
+    <img class="header__photo" src="./images/header_photo.png" alt="header photo">
+    <main class="main-block">
+      <section class="main-block__description">
+        <div class="product-block">
+          <div class="product-block__article">Quiet apartment</div>
+          <p class="product-block__part-of-apartament">Entire apartment</p>
+          <div class="product-block__parameters-apartment">
+            <p>4 quests</p>
+            <p>1 Bed</p>
+            <p>1 Bath</p>
+          </div>
+          <p class="product-block__description">
+            City Apartment is newly renovated in the heart of Budapest,
+            right in the city center. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam.
+          </p>
+          <a href="url" name="contact host" class="product-block__contact">Contact host</a>
+          <div class="amenities">
+            <div class="amenities__name">Amenities</div>
+            <div class="amenities__option">
+              <p>Elevator</p>
+              <p>Hair dryer</p>
+              <p>Washer</p>
+              <p>Kitchen</p>
+            </div>
+            <a href="url" name="Show all" class="amenities__link">Show All Amenities</a>
+          </div>
+          <div class="reviews-block">
+            <div class="reviews-block__name">Reviews</div>
+            <div class="reviews-block__client">
+              <img class="client__photo" src="./images/client_photo.png" alt="client photo">
+              <div class="client">
+                <div class="client__name">John</div>
+                <div class="client__date">Semtember 2016</div>
+              </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam.
+            </p>
+            <div class="reviews-block__client">
+              <img class="client__photo" src="./images/client_photo.png" alt="client photo">
+              <div class="client">
+                <div class="client__name">John</div>
+                <div class="client__date">Semtember 2016</div>
+              </div>
+            </div>
+            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            </p>
+          </div>
+          <div class="hosted">
+            <div class="hosted__name">Hosted by Jane</div>
+            <div class="hosted__area">Budapest, Hungary</div>
+            <p>Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit,
+              sed do eiusmod tempor incididunt ut
+              labore et magna aliqua.</p>
+              <div class="hosted__links">
+                <a href="url" name="contact host" class="hosted__link">Contact Host</a>
+              </div>
+          </div>
+        </div>
+        <div class="customer-form">
+          <div class="customer-form__block">
+          <div class="customer-form__price">25$ per night</div>
+          <input type="text" id="date" placeholder="Date">
+          <input type="text" id="guests" placeholder="Guests">
+          <div class="customer-form__links">
+            <a href="url" name="book" class="customer-form__link">Book</a>
+          </div>
+          </div>
+        </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__main-link">
+        <a href="url" name="air_bnb" class="main-link__url">Airbnb</a>
+        <a href="url" name="discover" class="main-link__url">Discover</a>
+        <a href="url" name="Hosting" class="main-link__url">Hosting</a>
+        <a href="url" name="About" class="side-link__url">About</a>
+        <a href="url" name="Travel credit" class="side-link__url">Travel credit</a>
+        <a href="url" name="Why host" class="side-link__url">Why host</a>
+        <a href="url" name="Press" class="side-link__url">Press</a>
+        <a href="url" name="Business" class="side-link__url">Business</a>
+        <a href="url" name="Hospitality" class="side-link__url">Hospitality</a>
+        <a href="url" name="Help" class="side-link__url">Help</a>
+        <a href="url" name="Guidebooks" class="side-link__url">Guidebooks</a>
+        <a href="url" name="Community" class="side-link__url">Community</a>
+      </div>
+    </footer>
   </body>
 </html>

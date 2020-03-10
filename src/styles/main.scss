@@ -1,7 +1,238 @@
-@import "utils";
-@import "fonts";
-@import "typography";
+@import "_fonts";
+@import "_header";
+@import "_footer";
+
+@mixin normalFontSize {
+  font-size: 16px;
+  line-height: 19px;
+}
 
 body {
-  background: $c-gray;
+  margin: 0;
+  font-family: "Avenir-Heavy", sans-serif;
+  color: #3d4e61;
+}
+
+//Головний блок, параметри головного блоку//
+
+.main-block {
+  display: flex;
+  justify-content: center;
+  margin-top: 29px;
+  margin-bottom: 75px;
+  &__description {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+//блок з описом продукту//
+.product-block {
+  width: 500px;
+  display: inline-block;
+  &__article {
+    font-size: 36px;
+    line-height: 42px;
+    width: 500px;
+    height: 50px;
+  }
+  &__part-of-apartament {
+    font-family: "Avenir-Book", sans-serif;
+    @include normalFontSize;
+    color: #687c94;
+    margin-top: 10px;
+  }
+  &__parameters-apartment {
+    display: flex;
+    justify-content: start;
+  }
+  &__parameters-apartment > p {
+    display: block;
+    padding-right: 30px;
+    font-family: "Avenir-Book", sans-serif;
+    @include normalFontSize;
+  }
+  &__description {
+    font-family: "Avenir-Book", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 30px;
+  }
+  &__contact {
+    text-decoration: none;
+    color: #3d4e61;
+    @include normalFontSize;
+    font-weight: bold;
+  }
+}
+//блок з параметрами помешкання//
+.amenities {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  &__name {
+    font-size: 20px;
+    line-height: 23px;
+  }
+  &__option {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    & > p {
+      display: inline-block;
+      width: 250px;
+      @include normalFontSize;
+      font-family: "Avenir-Book", sans-serif;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: #3d4e61;
+    @include normalFontSize;
+    font-weight: bold;
+  }
+}
+
+//форма для бронювання апартаментів//
+
+.customer-form {
+  margin-left: 100px;
+  width: 330px;
+  height: 320px;
+  border: 1px solid #e1e7ed;
+  border-radius: 3px;
+  &__block {
+    margin: 30px 30px 38px;
+  }
+  &__links {
+    margin-top: 24px;
+    width: 270px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    background: #fd5c63;
+    border-radius: 4px;
+  }
+  &__link {
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    line-height: 50px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.5s, color 0.5s, border 0.5s;
+    &:hover {
+      border: 1px solid #fd5c63;
+      background-color: white;
+      border-radius: 4px;
+      color: #fd5c63;
+    }
+  }
+}
+
+#guests,
+#date {
+  width: 250px;
+  height: 50px;
+  border: 1px solid #e1e7ed;
+  border-radius: 3px;
+  @include normalFontSize;
+  font-family: "Avenir-Book", sans-serif;
+  padding-left: 20px;
+  margin-top: 39px;
+}
+
+#guests {
+  margin-top: 16px;
+}
+
+//блок з відгуками//
+
+.reviews-block {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  font-size: 28px;
+  line-height: 33px;
+  & > p {
+    @include normalFontSize;
+    font-family: "Avenir-Book", sans-serif;
+  }
+  &__name {
+    margin-bottom: 20px;
+  }
+  &__client {
+    display: flex;
+    margin-top: 30px;
+  }
+}
+
+//блок з відомостями про людину яка залишила відгук//
+
+.client {
+  display: inline-block;
+  margin-left: 20px;
+  &__photo {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+  }
+  &__name {
+    font-size: 20px;
+    line-height: 27px;
+  }
+  &__date {
+    font-size: 14px;
+    line-height: 16px;
+    font-family: "Avenir-Book", sans-serif;
+  }
+}
+
+//відомості про арендодавця//
+
+.hosted {
+  & > p {
+    font-family: "Avenir-Book", sans-serif;
+    @include normalFontSize;
+  }
+  &__name {
+    font-family: "Avenir-Medium", sans-serif;
+    margin-top: 50px;
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  &__area {
+    font-family: "Avenir-Book", sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  &__links {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  &__link {
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #118488;
+    color: #118488;
+    line-height: 50px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.5s, color 0.5s, border 0.5s;
+    &:hover {
+      border: 1px solid #118488;
+      background-color: #118488;
+      border-radius: 4px;
+      color: white;
+    }
+  }
 }

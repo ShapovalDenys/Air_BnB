@@ -1,0 +1,49 @@
+//параметри навігаційнгого меню та шапки сайту//
+
+.header {
+  display: flex;
+  height: 60px;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  &__logo-photo {
+    width: 30px;
+    height: 30px;
+    margin-left: 26px;
+  }
+  &__client-photo {
+    width: 30px;
+    height: 30px;
+    margin-right: 19px;
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__list {
+      list-style: none;
+    }
+    &__item {
+      display: inline-block;
+    }
+    &__link {
+      margin-right: 30px;
+      text-decoration: none;
+      position: relative;
+      display: inline-block;
+      font-size: 16px;
+      line-height: 60px;
+      font-weight: bold;
+      color: #3d4e61;
+      transition: color 0.5s;
+      &:hover {
+        color: #fd5c63;
+      }
+    }
+  }
+  &__photo {
+    height: 464px;
+    width: 100%;
+  }
+}
