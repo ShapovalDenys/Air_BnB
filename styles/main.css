@@ -1,0 +1,347 @@
+@font-face {
+  font-family: "Avenir-Book";
+  src: url(./fonts/Avenir-Book.ttf);
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Avenir-Medium";
+  src: url(./fonts/Avenir-Medium.ttf);
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Avenir-Heavy";
+  src: url(./fonts/Avenir-Heavy.ttf);
+  font-weight: normal; }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .header__logo-photo {
+    width: 30px;
+    height: 30px;
+    margin-left: 26px; }
+  .header__client-photo {
+    width: 30px;
+    height: 30px;
+    margin-right: 19px; }
+  .header__navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .header__navigation__list {
+      list-style: none; }
+    .header__navigation__item {
+      display: inline-block; }
+    .header__navigation__link {
+      margin-right: 30px;
+      text-decoration: none;
+      position: relative;
+      display: inline-block;
+      font-size: 16px;
+      line-height: 60px;
+      font-weight: bold;
+      color: #3d4e61;
+      -webkit-transition: color 0.5s;
+      transition: color 0.5s; }
+      .header__navigation__link:hover {
+        color: #fd5c63; }
+  .header__photo {
+    height: 464px;
+    width: 100%; }
+
+.footer {
+  height: 220px;
+  -webkit-box-shadow: 0 -1px 0 #e1e7ed;
+          box-shadow: 0 -1px 0 #e1e7ed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .footer__main-link {
+    display: grid;
+    grid-template-columns: repeat(3, 430px);
+    grid-template-rows: 50px;
+    text-align: center; }
+
+.main-link__url {
+  font-weight: bold; }
+
+.side-link__url {
+  display: block;
+  height: 30px; }
+
+.side-link__url,
+.main-link__url {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: "Avenir-Heavy", sans-serif;
+  color: #3d4e61;
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
+  .side-link__url:hover,
+  .main-link__url:hover {
+    color: grey;
+    font-size: 18px; }
+
+body {
+  margin: 0;
+  font-family: "Avenir-Heavy", sans-serif;
+  color: #3d4e61; }
+
+.main-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 29px;
+  margin-bottom: 75px; }
+  .main-block__description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+
+.product-block {
+  width: 500px;
+  display: inline-block; }
+  .product-block__article {
+    font-size: 36px;
+    line-height: 42px;
+    width: 500px;
+    height: 50px; }
+  .product-block__part-of-apartament {
+    font-family: "Avenir-Book", sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    color: #687c94;
+    margin-top: 10px; }
+  .product-block__parameters-apartment {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start; }
+  .product-block__parameters-apartment > p {
+    display: block;
+    padding-right: 30px;
+    font-family: "Avenir-Book", sans-serif;
+    font-size: 16px;
+    line-height: 19px; }
+  .product-block__description {
+    font-family: "Avenir-Book", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 30px; }
+  .product-block__contact {
+    text-decoration: none;
+    color: #3d4e61;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: bold; }
+
+.amenities {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+  .amenities__name {
+    font-size: 20px;
+    line-height: 23px; }
+  .amenities__option {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+    .amenities__option > p {
+      display: inline-block;
+      width: 250px;
+      font-size: 16px;
+      line-height: 19px;
+      font-family: "Avenir-Book", sans-serif; }
+  .amenities__link {
+    text-decoration: none;
+    color: #3d4e61;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: bold; }
+
+.customer-form {
+  margin-left: 100px;
+  width: 330px;
+  height: 320px;
+  border: 1px solid #e1e7ed;
+  border-radius: 3px; }
+  .customer-form__block {
+    margin: 30px 30px 38px; }
+  .customer-form__links {
+    margin-top: 24px;
+    width: 270px;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: #fd5c63;
+    border-radius: 4px; }
+  .customer-form__link {
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    line-height: 50px;
+    width: 100%;
+    text-align: center;
+    -webkit-transition: background-color 0.5s, color 0.5s, border 0.5s;
+    transition: background-color 0.5s, color 0.5s, border 0.5s; }
+    .customer-form__link:hover {
+      border: 1px solid #fd5c63;
+      background-color: white;
+      border-radius: 4px;
+      color: #fd5c63; }
+
+#guests,
+#date {
+  width: 250px;
+  height: 50px;
+  border: 1px solid #e1e7ed;
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: "Avenir-Book", sans-serif;
+  padding-left: 20px;
+  margin-top: 39px; }
+
+#guests {
+  margin-top: 16px; }
+
+.reviews-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 50px;
+  font-size: 28px;
+  line-height: 33px; }
+  .reviews-block > p {
+    font-size: 16px;
+    line-height: 19px;
+    font-family: "Avenir-Book", sans-serif; }
+  .reviews-block__name {
+    margin-bottom: 20px; }
+  .reviews-block__client {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 30px; }
+
+.client {
+  display: inline-block;
+  margin-left: 20px; }
+  .client__photo {
+    display: inline-block;
+    width: 50px;
+    height: 50px; }
+  .client__name {
+    font-size: 20px;
+    line-height: 27px; }
+  .client__date {
+    font-size: 14px;
+    line-height: 16px;
+    font-family: "Avenir-Book", sans-serif; }
+
+.hosted > p {
+  font-family: "Avenir-Book", sans-serif;
+  font-size: 16px;
+  line-height: 19px; }
+
+.hosted__name {
+  font-family: "Avenir-Medium", sans-serif;
+  margin-top: 50px;
+  font-size: 28px;
+  line-height: 32px;
+  margin-bottom: 15px;
+  font-weight: bold; }
+
+.hosted__area {
+  font-family: "Avenir-Book", sans-serif;
+  font-size: 14px;
+  line-height: 16px; }
+
+.hosted__links {
+  width: 150px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.hosted__link {
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #118488;
+  color: #118488;
+  line-height: 50px;
+  width: 100%;
+  text-align: center;
+  -webkit-transition: background-color 0.5s, color 0.5s, border 0.5s;
+  transition: background-color 0.5s, color 0.5s, border 0.5s; }
+  .hosted__link:hover {
+    border: 1px solid #118488;
+    background-color: #118488;
+    border-radius: 4px;
+    color: white; }
+
+/*# sourceMappingURL=main.css.map */
