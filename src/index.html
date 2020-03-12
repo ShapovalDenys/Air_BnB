@@ -4,56 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Air_BnB</title>
-    <link rel="stylesheet" href="../dist/styles/main.css">
+    <link rel="stylesheet" href="./styles/main.css">
   </head>
   <body>
     <header class="header">
-      <img class="header__logo-photo" src="./images/photo_logo.png" alt="air_bnb logo">
+      <a href="#">
+        <img class="header__logo-photo" src="./images/photo_logo.png" alt="air_bnb logo" href="#">
+      </a>
       <nav class="header__navigation">
-        <ul class="header__navigation__list">
-          <li class="header__navigation__item">
-            <a class="header__navigation__link" href="become_a_host">Become a host</a>
+        <ul class="header__navigation-list">
+          <li class="header__navigation-item">
+            <a class="header__navigation-link" href="#">Become a host</a>
           </li>
-          <li class="header__navigation__item">
-            <a class="header__navigation__link" href="trips">Trips</a>
+          <li class="header__navigation-item">
+            <a class="header__navigation-link" href="#">Trips</a>
           </li>
-          <li class="header__navigation__item">
-            <a class="header__navigation__link" href="messages">Messages</a>
+          <li class="header__navigation-item">
+            <a class="header__navigation-link" href="#">Messages</a>
           </li>
         </ul>
-      <img class="header__client-photo" src="./images/client_photo.png" alt="client photo">
+        <a href="#">
+          <img class="header__client-photo" src="./images/client_photo.png" alt="client photo">
+        </a>
       </nav>
     </header>
     <img class="header__photo" src="./images/header_photo.png" alt="header photo">
     <main class="main-block">
       <section class="main-block__description">
         <div class="product-block">
-          <div class="product-block__article">Quiet apartment</div>
+          <h1 class="product-block__article">Quiet apartment</h1>
           <p class="product-block__part-of-apartament">Entire apartment</p>
-          <div class="product-block__parameters-apartment">
-            <p>4 quests</p>
-            <p>1 Bed</p>
-            <p>1 Bath</p>
-          </div>
+          <ul class="product-block__parameters-apartment">
+            <li class="product-block__parameters-item">4 quests</li>
+            <li class="product-block__parameters-item">1 Bed</li>
+            <li class="product-block__parameters-item">1 Bath</li>
+          </ul>
           <p class="product-block__description">
             City Apartment is newly renovated in the heart of Budapest,
             right in the city center. Lorem ipsum dolor sit amet,
             consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             Ut enim ad minim veniam.
           </p>
-          <a href="url" name="contact host" class="product-block__contact">Contact host</a>
+          <a href="#" name="contact host" class="product-block__contact">Contact host</a>
           <div class="amenities">
-            <div class="amenities__name">Amenities</div>
-            <div class="amenities__option">
-              <p>Elevator</p>
-              <p>Hair dryer</p>
-              <p>Washer</p>
-              <p>Kitchen</p>
-            </div>
-            <a href="url" name="Show all" class="amenities__link">Show All Amenities</a>
+            <h2 class="amenities__name">Amenities</h2>
+            <ul class="amenities__option">
+              <li class="amenities__option-item">Elevator</li>
+              <li class="amenities__option-item">Hair dryer</li>
+              <li class="amenities__option-item">Washer</li>
+              <li class="amenities__option-item">Kitchen</li>
+            </ul>
+            <a href="#" name="Show all" class="amenities__link">Show All Amenities</a>
           </div>
           <div class="reviews-block">
-            <div class="reviews-block__name">Reviews</div>
+            <h3 class="reviews-block__name">Reviews</h3>
             <div class="reviews-block__client">
               <img class="client__photo" src="./images/client_photo.png" alt="client photo">
               <div class="client">
@@ -61,7 +65,7 @@
                 <div class="client__date">Semtember 2016</div>
               </div>
             </div>
-            <p>Lorem ipsum dolor sit amet,
+            <p class="reviews-block__text">Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit,
                 sed do eiusmod tempor incididunt
                 ut labore et dolore magna aliqua.
@@ -80,43 +84,69 @@
           <div class="hosted">
             <div class="hosted__name">Hosted by Jane</div>
             <div class="hosted__area">Budapest, Hungary</div>
-            <p>Lorem ipsum dolor sit amet,
+            <p class="hosted__text">Lorem ipsum dolor sit amet,
               consectetur adipiscing elit,
               sed do eiusmod tempor incididunt ut
               labore et magna aliqua.</p>
               <div class="hosted__links">
-                <a href="url" name="contact host" class="hosted__link">Contact Host</a>
+                <a href="#" name="contact host" class="hosted__link">Contact Host</a>
               </div>
           </div>
         </div>
-        <div class="customer-form">
+        <form class="customer-form" action="#" method="post">
           <div class="customer-form__block">
-          <div class="customer-form__price">25$ per night</div>
-          <input type="text" id="date" placeholder="Date">
-          <input type="text" id="guests" placeholder="Guests">
-          <div class="customer-form__links">
-            <a href="url" name="book" class="customer-form__link">Book</a>
+            <div class="customer-form__price">25$ per night</div>
+            <input type="date" class="customer-form__date" id="date" placeholder="Date">
+            <input type="number" class="customer-form__guests" id="guests" placeholder="Guests">
+            <button class="customer-form__links" type="submit">
+              <a href="#" name="book" class="customer-form__link">Book</a>
+            </button>
           </div>
-          </div>
-        </div>
+        </form>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__main-link">
-        <a href="url" name="air_bnb" class="main-link__url">Airbnb</a>
-        <a href="url" name="discover" class="main-link__url">Discover</a>
-        <a href="url" name="Hosting" class="main-link__url">Hosting</a>
-        <a href="url" name="About" class="side-link__url">About</a>
-        <a href="url" name="Travel credit" class="side-link__url">Travel credit</a>
-        <a href="url" name="Why host" class="side-link__url">Why host</a>
-        <a href="url" name="Press" class="side-link__url">Press</a>
-        <a href="url" name="Business" class="side-link__url">Business</a>
-        <a href="url" name="Hospitality" class="side-link__url">Hospitality</a>
-        <a href="url" name="Help" class="side-link__url">Help</a>
-        <a href="url" name="Guidebooks" class="side-link__url">Guidebooks</a>
-        <a href="url" name="Community" class="side-link__url">Community</a>
-      </div>
+      <nav>
+        <ul class="footer__main-link">
+          <li>
+            <a href="#" name="air_bnb" class="main-link__url">Airbnb</a>
+          </li>
+          <li>
+            <a href="#" name="discover" class="main-link__url">Discover</a>
+          </li>
+          <li>
+            <a href="#" name="Hosting" class="main-link__url">Hosting</a>
+          </li>
+          <li>
+            <a href="#" name="About" class="side-link__url">About</a>
+          </li>
+          <li>
+            <a href="#" name="Travel credit" class="side-link__url">Travel credit</a>
+          </li>
+          <li>
+            <a href="#" name="Why host" class="side-link__url">Why host</a>
+          </li>
+          <li>
+            <a href="#" name="Press" class="side-link__url">Press</a>
+          </li>
+          <li>
+            <a href="#" name="Business" class="side-link__url">Business</a>
+          </li>
+          <li>
+            <a href="#" name="Hospitality" class="side-link__url">Hospitality</a>
+          </li>
+          <li>
+            <a href="#" name="Help" class="side-link__url">Help</a>
+          </li>
+          <li>
+            <a href="#" name="Guidebooks" class="side-link__url">Guidebooks</a>
+          </li>
+          <li>
+            <a href="#" name="Community" class="side-link__url">Community</a>
+          </li>
+        </ul>
+      </nav>
     </footer>
   </body>
 </html>

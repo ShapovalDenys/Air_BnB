@@ -1,0 +1,13 @@
+//конфігурація елементів//
+
+@mixin normalFontSize {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+$normalFontweight: 300;
+$borderFormColor: #e1e7ed;
+$mainFontColor: #3d4e61;
+$buttonStyleColor: #fd5c63;
+$contactHostColorButton: #118488;
+$animSp: 0.3s;
