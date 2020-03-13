@@ -7,6 +7,7 @@
 //Головний блок, параметри головного блоку//
 
 .main-block {
+  margin: 0 20px;
   display: flex;
   justify-content: center;
   margin-top: 29px;
@@ -20,13 +21,13 @@
 //блок з описом продукту//
 
 .product-block {
-  width: 500px;
+  max-width: 500px;
   display: inline-block;
   font-weight: $normalFontweight;
   &__article {
     font-size: 36px;
     line-height: 42px;
-    width: 500px;
+    max-width: 500px;
     height: 50px;
   }
 
@@ -59,6 +60,10 @@
     color: $mainFontColor;
     @include normalFontSize;
     font-weight: bold;
+    transition: $animSp;
+    &:hover {
+      color: $buttonStyleColor;
+    }
   }
 }
 
@@ -95,6 +100,10 @@
     color: $mainFontColor;
     font-weight: bold;
     margin-top: 20px;
+    transition: $animSp;
+    &:hover {
+      color: $buttonStyleColor;
+    }
   }
 }
 
@@ -241,5 +250,35 @@
       border-radius: 4px;
       color: white;
     }
+  }
+}
+
+.mobile-version {
+  display: none;
+}
+
+@media screen and (max-width: $tabletSizeScreen) {
+  .main-block__description,
+  .main-block {
+    display: flex;
+    justify-content: center;
+  }
+
+  .desktop-version {
+    display: none;
+  }
+
+  .mobile-version {
+    margin-top: 40px;
+    display: block;
+    transform: scale(0.8);
+  }
+
+  .customer-form {
+    margin: auto;
+  }
+
+  .reviews-block {
+    margin-top: 0;
   }
 }

@@ -54,3 +54,20 @@
     width: 100%;
   }
 }
+
+@media screen and (max-width: $mobileSizeScreen) {
+  .header {
+    &__logo-photo {
+      display: none;
+    }
+
+    &__client-photo {
+      display: none;
+    }
+
+    &__navigation-link {
+      font-size: 14px;
+      line-height: 30px;
+    }
+  }
+}

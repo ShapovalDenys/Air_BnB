@@ -12,13 +12,15 @@
   &__main-link {
     display: grid;
     grid-template-columns: repeat(3, 430px);
-    grid-template-rows: 50px;
+    grid-gap: 10px;
     text-align: center;
   }
 }
 
 .main-link__url {
+  display: inline-block;
   font-weight: bold;
+  margin-bottom: 30px;
 }
 
 .side-link__url {
@@ -36,5 +38,18 @@
   &:hover {
     color: grey;
     font-size: 18px;
+  }
+}
+
+@media screen and (max-width: $tabletSizeScreen) {
+  .footer {
+    &__main-link {
+      grid-template-columns: repeat(1, 430px);
+      grid-gap: 15px;
+    }
+  }
+
+  .main-link__url {
+    margin-bottom: 10px;
   }
 }
