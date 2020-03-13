@@ -60,6 +60,15 @@
     height: 464px;
     width: 100%; }
 
+@media screen and (max-width: 440px) {
+  .header__logo-photo {
+    display: none; }
+  .header__client-photo {
+    display: none; }
+  .header__navigation-link {
+    font-size: 14px;
+    line-height: 30px; } }
+
 .footer {
   height: 220px;
   -webkit-box-shadow: 0 -1px 0 #e1e7ed;
@@ -78,11 +87,13 @@
   .footer__main-link {
     display: grid;
     grid-template-columns: repeat(3, 430px);
-    grid-template-rows: 50px;
+    grid-gap: 10px;
     text-align: center; }
 
 .main-link__url {
-  font-weight: bold; }
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 30px; }
 
 .side-link__url {
   display: block;
@@ -100,6 +111,13 @@
   .main-link__url:hover {
     color: grey;
     font-size: 18px; }
+
+@media screen and (max-width: 1080px) {
+  .footer__main-link {
+    grid-template-columns: repeat(1, 430px);
+    grid-gap: 15px; }
+  .main-link__url {
+    margin-bottom: 10px; } }
 
 ul,
 li {
@@ -119,6 +137,7 @@ body {
   color: #3d4e61; }
 
 .main-block {
+  margin: 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,13 +155,13 @@ body {
             justify-content: space-between; }
 
 .product-block {
-  width: 500px;
+  max-width: 500px;
   display: inline-block;
   font-weight: 300; }
   .product-block__article {
     font-size: 36px;
     line-height: 42px;
-    width: 500px;
+    max-width: 500px;
     height: 50px; }
   .product-block__part-of-apartament {
     font-size: 16px;
@@ -171,7 +190,11 @@ body {
     color: #3d4e61;
     font-size: 16px;
     line-height: 19px;
-    font-weight: bold; }
+    font-weight: bold;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+    .product-block__contact:hover {
+      color: #fd5c63; }
 
 .amenities {
   margin-top: 40px;
@@ -213,7 +236,11 @@ body {
     text-decoration: none;
     color: #3d4e61;
     font-weight: bold;
-    margin-top: 20px; }
+    margin-top: 20px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+    .amenities__link:hover {
+      color: #fd5c63; }
 
 .customer-form {
   margin-left: 100px;
@@ -338,5 +365,29 @@ body {
       background-color: #118488;
       border-radius: 4px;
       color: white; }
+
+.mobile-version {
+  display: none; }
+
+@media screen and (max-width: 1080px) {
+  .main-block__description,
+  .main-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .desktop-version {
+    display: none; }
+  .mobile-version {
+    margin-top: 40px;
+    display: block;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8); }
+  .customer-form {
+    margin: auto; }
+  .reviews-block {
+    margin-top: 0; } }
 
 /*# sourceMappingURL=main.css.map */
