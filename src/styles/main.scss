@@ -271,14 +271,26 @@
   .mobile-version {
     margin-top: 40px;
     display: block;
-    transform: scale(0.8);
+    width: 100%;
   }
 
   .customer-form {
     margin: auto;
+    &__guests,
+    &__date {
+      width: calc(100% - 20px);
+      margin-top: 39px;
+    }
+    &__links {
+      width: 100%;
+    }
   }
 
   .reviews-block {
     margin-top: 0;
+  }
+
+  .amenities {
+    margin-bottom: 20px;
   }
 }
