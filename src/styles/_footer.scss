@@ -1,0 +1,54 @@
+@import "_variables";
+
+//параметри кінця сайту, посилання на партнерські сайти//
+
+.footer {
+  height: 220px;
+  box-shadow: 0 -1px 0 #e1e7ed;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  &__main-link {
+    display: grid;
+    grid-template-columns: repeat(3, 430px);
+    grid-gap: 10px;
+    text-align: center;
+  }
+}
+
+.main-link__url {
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.side-link__url {
+  display: block;
+  height: 30px;
+}
+
+.side-link__url,
+.main-link__url {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 19px;
+  color: $mainFontColor;
+  transition: #{$animSp};
+  &:hover {
+    color: #fd5c63;
+  }
+}
+
+@media screen and (max-width: $tabletSizeScreen) {
+  .footer {
+    &__main-link {
+      grid-template-columns: repeat(1, 430px);
+      grid-gap: 15px;
+    }
+  }
+
+  .main-link__url {
+    margin-bottom: 10px;
+  }
+}

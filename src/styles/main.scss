@@ -1,7 +1,296 @@
-@import "utils";
-@import "fonts";
-@import "typography";
+@import "_fonts";
+@import "_header";
+@import "_footer";
+@import "_cssreset";
+@import "_variables";
 
-body {
-  background: $c-gray;
+//Головний блок, параметри головного блоку//
+
+.main-block {
+  margin: 0 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 29px;
+  margin-bottom: 75px;
+  &__description {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+//блок з описом продукту//
+
+.product-block {
+  max-width: 500px;
+  display: inline-block;
+  font-weight: $normalFontweight;
+  &__article {
+    font-size: 36px;
+    line-height: 42px;
+    max-width: 500px;
+    height: 50px;
+  }
+
+  &__part-of-apartament {
+    @include normalFontSize;
+    color: #687c94;
+    margin-top: 10px;
+  }
+
+  &__parameters-apartment {
+    display: flex;
+    justify-content: start;
+  }
+
+  &__parameters-item {
+    display: inline-block;
+    padding-right: 30px;
+    @include normalFontSize;
+    padding-left: 0;
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 30px;
+  }
+
+  &__contact {
+    text-decoration: none;
+    color: $mainFontColor;
+    @include normalFontSize;
+    font-weight: bold;
+    transition: $animSp;
+    &:hover {
+      color: $buttonStyleColor;
+    }
+  }
+}
+
+//блок з параметрами помешкання//
+
+.amenities {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  @include normalFontSize;
+  &__name {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  &__option {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  &__option-item {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 250px;
+    font-family: "Avenir-Book", sans-serif;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $mainFontColor;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: $animSp;
+    &:hover {
+      color: $buttonStyleColor;
+    }
+  }
+}
+
+//форма для бронювання апартаментів//
+
+.customer-form {
+  margin-left: 100px;
+  width: 330px;
+  height: 320px;
+  border: 1px solid $borderFormColor;
+  border-radius: 3px;
+  &__block {
+    margin: 30px 30px 38px;
+  }
+
+  &__links {
+    margin-top: 24px;
+    width: 270px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    background: $buttonStyleColor;
+    border-radius: 4px;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    line-height: 50px;
+    width: 100%;
+    text-align: center;
+    transition: background-color #{$animSp}, color#{$animSp}, border#{$animSp};
+    &:hover {
+      border: 1px solid $buttonStyleColor;
+      background-color: white;
+      border-radius: 4px;
+      color: $buttonStyleColor;
+    }
+  }
+  &__guests,
+  &__date {
+    width: 250px;
+    height: 50px;
+    border: 1px solid $borderFormColor;
+    border-radius: 3px;
+    @include normalFontSize;
+    font-weight: $normalFontweight;
+    padding-left: 20px;
+    margin-top: 39px;
+  }
+
+  &__guests {
+    margin-top: 16px;
+  }
+}
+
+//блок з відгуками//
+
+.reviews-block {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  font-size: 28px;
+  line-height: 33px;
+  &__text {
+    @include normalFontSize;
+    font-weight: $normalFontweight;
+  }
+
+  &__name {
+    margin-bottom: 20px;
+  }
+
+  &__client {
+    display: flex;
+    margin-top: 30px;
+  }
+}
+
+//блок з відомостями про людину яка залишила відгук//
+
+.client {
+  display: inline-block;
+  margin-left: 20px;
+  &__photo {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+  }
+
+  &__name {
+    font-size: 20px;
+    line-height: 27px;
+  }
+
+  &__date {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 300;
+  }
+}
+
+//відомості про арендодавця//
+
+.hosted {
+  font-weight: $normalFontweight;
+  &__text {
+    @include normalFontSize;
+  }
+
+  &__name {
+    margin-top: 50px;
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 15px;
+  }
+
+  &__area {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__links {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid $contactHostColorButton;
+    color: $contactHostColorButton;
+    line-height: 50px;
+    width: 100%;
+    text-align: center;
+    transition: background-color #{$animSp}, color#{$animSp}, border#{$animSp};
+    &:hover {
+      border: 1px solid $contactHostColorButton;
+      background-color: $contactHostColorButton;
+      border-radius: 4px;
+      color: white;
+    }
+  }
+}
+
+.mobile-version {
+  display: none;
+}
+
+@media screen and (max-width: $tabletSizeScreen) {
+  .main-block__description,
+  .main-block {
+    display: flex;
+    justify-content: center;
+  }
+
+  .desktop-version {
+    display: none;
+  }
+
+  .mobile-version {
+    margin-top: 40px;
+    display: block;
+    width: 100%;
+  }
+
+  .customer-form {
+    margin: auto;
+    &__guests,
+    &__date {
+      width: calc(100% - 20px);
+      margin-top: 39px;
+    }
+    &__links {
+      width: 100%;
+    }
+  }
+
+  .reviews-block {
+    margin-top: 0;
+  }
+
+  .amenities {
+    margin-bottom: 20px;
+  }
 }
